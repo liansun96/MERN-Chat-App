@@ -3,8 +3,8 @@ import express from 'express'
 const app = express()
 import authRoute from './routes/auth.route.js'
 import { connectDB } from './lib/db.js'
-import { configDotenv } from 'dotenv'
 
+app.use(express.json())
 
 app.use('/api/auth' , authRoute) 
 
